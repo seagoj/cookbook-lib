@@ -3,7 +3,8 @@ Vagrant::Config.run do |config|
 
   cookbooks = {
     'apt'=>'git@github.com:seagoj/cookbook-apt.git',
-    'cookbook-lib::predis'=>'git@github.com:seagoj/cookbook-lib.git'
+    'cookbook-lib::predis'=>'git@github.com:seagoj/cookbook-lib.git',
+    'cookbook-lib::bootstrap'=>'git@github.com:seagoj/cookbook-lib.git'
   }
   config.vm.box = "precise64"
   config.vm.box_url = "http://files.vagrantup.com/precise64.box"

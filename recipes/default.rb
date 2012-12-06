@@ -3,3 +3,9 @@ execute "apt-update" do
 end
 
 package 'git'
+
+lib = '/vagrant/lib'
+
+unless(File.exists?(lib))
+    Dir.mkdir(lib)
+end
