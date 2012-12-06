@@ -1,5 +1,3 @@
-puts File.pwd
-
 include_recipe 'cookbook-lib'
 
 execute "mkdir-lib" do
