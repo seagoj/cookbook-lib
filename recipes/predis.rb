@@ -1,4 +1,6 @@
-require 'default.rb'
+puts File.pwd
+
+include_recipe 'cookbook-lib'
 
 execute "mkdir-lib" do
   not_if {File.exists?('/vagrant/lib')}
