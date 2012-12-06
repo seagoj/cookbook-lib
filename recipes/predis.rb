@@ -1,9 +1,5 @@
 include_recipe 'cookbook-lib'
-
-execute "mkdir-lib" do
-  not_if {File.exists?('/vagrant/lib')}
-  command "mkdir /vagrant/lib"
-end
+lib = '/vagrant/lib'
 
 git "/vagrant/lib/temp" do
   not_if {File.exists?('/vagrant/lib/predis')}

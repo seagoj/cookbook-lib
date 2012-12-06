@@ -1,4 +1,5 @@
 include_recipe 'cookbook-lib'
+lib = '/vagrant/lib'
 
 git "#{lib}/temp" do
   not_if {File.exists?("#{lib}/bootstrap")}
