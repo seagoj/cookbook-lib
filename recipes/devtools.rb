@@ -1,5 +1,5 @@
 include_recipe 'lib'
-require 'FileUtils'
+require 'fileutils'
 lib = '/vagrant/lib'
 docRoot = '/vagrant/src'
 
