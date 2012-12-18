@@ -10,4 +10,4 @@ git "#{lib}" do
   action :checkout
 end
 
-FileUtils.copy "#{lib}/Devtools/dep/autoloader.php" "#{docRoot}"
+FileUtils.copy("#{lib}/Devtools/dep/autoloader.php", "#{docRoot}")
