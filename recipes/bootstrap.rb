@@ -1,4 +1,4 @@
-include_recipe 'cookbook-lib'
+include_recipe 'lib'
 lib = '/vagrant/lib'
 
 git "#{lib}" do
