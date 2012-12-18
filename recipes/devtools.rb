@@ -1,4 +1,5 @@
 include_recipe 'lib'
+require 'FileUtils'
 lib = '/vagrant/lib'
 docRoot = '/vagrant/src'
 
@@ -9,4 +10,4 @@ git "#{lib}" do
   action :checkout
 end
 
-File.cp "#{lib}/Devtools/dep/autoloader.php #{docRoot}"
+FileUtils.copy "#{lib}/Devtools/dep/autoloader.php" "#{docRoot}"
