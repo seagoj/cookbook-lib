@@ -9,4 +9,4 @@ git "#{lib}" do
   action :checkout
 end
 
-File.copy "#{lib}/Devtools/dep/autoloader.php #{docRoot}"
+File.cp "#{lib}/Devtools/dep/autoloader.php #{docRoot}"
