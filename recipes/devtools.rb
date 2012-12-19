@@ -3,7 +3,7 @@ require 'fileutils'
 lib = '/vagrant/lib'
 docRoot = '/vagrant/src'
 
-git "#{lib}" do
+git "#{lib}/Devtools" do
   not_if {File.exists?("#{lib}/Devtools")}
   repository "git@github.com:seagoj/devtools.git"
   reference "master"
