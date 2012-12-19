@@ -2,7 +2,7 @@ include_recipe 'lib'
 lib = '/vagrant/lib'
 
 git "#{lib}/temp" do
-  not_if {File.exists?("#{lib}/predis")}
+  not_if {File.exists?("#{lib}/Predis")}
   repository "git://github.com/nrk/predis.git"
   reference "master"
   action :checkout
