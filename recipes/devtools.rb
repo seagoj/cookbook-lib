@@ -11,5 +11,5 @@ git "#{lib}/Devtools" do
 end
 
 # system("git clone git@github.com:seagoj/devtools.git #{lib}/Devtools")
-
-FileUtils.copy("#{lib}/Devtools/dep/autoloader.php", "#{docRoot}")
+# FileUtils.copy("#{lib}/Devtools/dep/autoloader.php", "#{docRoot}")
+\
