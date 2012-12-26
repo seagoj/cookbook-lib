@@ -3,8 +3,8 @@ Vagrant::Config.run do |config|
 
   cookbooks = {
     'apt'=>'git@github.com:seagoj/cookbook-apt.git',
-    'cookbook-lib'=>'git@github.com:seagoj/cookbook-lib.git'
-    # 'cookbook-lib::predis'=>'git@github.com:seagoj/cookbook-lib.git',
+    'cookbook-lib'=>'git@github.com:seagoj/cookbook-lib.git',
+    'cookbook-lib::predis'=>'git@github.com:seagoj/cookbook-lib.git',
     # 'cookbook-lib::bootstrap'=>'git@github.com:seagoj/cookbook-lib.git',
     # 'cookbook-lib::devtools'=>'git@github.com:seagoj/cookbook-lib.git'
   }
