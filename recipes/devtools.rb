@@ -1,4 +1,4 @@
-include_recipe 'cookbook-lib'
+include_recipe 'lib'
 require 'fileutils'
 lib = '/vagrant/lib'
 docRoot = '/vagrant/src'
