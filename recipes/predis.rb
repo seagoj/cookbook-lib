@@ -1,8 +1,6 @@
 include_recipe 'lib'
 lib = '/vagrant/lib'
 
-
-
 git "#{lib}/temp" do
   not_if {File.exists?("#{lib}/Predis")}
   repository "git://github.com/nrk/predis.git"
@@ -16,7 +14,7 @@ execute "mkdir-lib" do
 end
   
 execute "copy-to-lib" do
-  #not_if {File.exists?("#{lib}/Predis")}
+  not_if {File.exists?("#{lib}/Predis")}
   command "cp -r #{lib}/temp/lib/Predis #{lib}"
 end
   
