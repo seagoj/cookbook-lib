@@ -3,7 +3,7 @@ lib = '/vagrant/lib'
 
 git "#{lib}/bootstrap" do
   not_if {File.exists?("#{lib}/bootstrap")}
-  repository "git://github.com/twitter/bootstrap.git"
+  repository "git://github.com/twbs/bootstrap.git"
   reference "master"
   action :checkout
 end
