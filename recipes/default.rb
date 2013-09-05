@@ -1,11 +1,6 @@
-execute "apt-update" do
-    command "apt-get update"
-end
-
+include_recipe 'apt'
 package 'git'
 
-lib = '/vagrant/lib'
-
-unless(File.exists?(lib))
-    Dir.mkdir(lib)
+unless(File.exists?(node[:lib][:lib_dir]))
+    Dir.mkdir(node[:lib][:lib_dir])
 end
