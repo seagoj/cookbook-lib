@@ -1,8 +1,7 @@
 include_recipe 'lib'
-lib = '/vagrant/lib'
 
-git "#{lib}/bootstrap" do
-  not_if {File.exists?("#{lib}/bootstrap")}
+git "#{node[:lib][:lib_dir]}/bootstrap" do
+  not_if {File.exists?("#{node[:lib][:lib_dir]}/bootstrap")}
   repository "git://github.com/twitter/bootstrap.git"
   reference "master"
   action :checkout
