@@ -1,6 +1,5 @@
 include_recipe 'lib'
 require 'fileutils'
-docRoot = '/vagrant/src'
 
 git "#{node[:lib][:lib_dir]}/Devtools" do
   not_if {File.exists?("#{node[:lib][:lib_dir]}/Devtools")}
