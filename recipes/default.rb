@@ -1,6 +1,9 @@
 include_recipe 'apt'
 package 'git'
 
-unless(File.exists?(node[:lib][:lib_dir]))
-    Dir.mkdir(node[:lib][:lib_dir])
+directory node[:lib][:lib_dir] do
+    not_if File.exists?(node[:lib][:lib_dir])
+    owner node[:lib][:user]
+    group node[:lib][:group]
+    action :create
 end
