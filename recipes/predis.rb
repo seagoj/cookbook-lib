@@ -20,5 +20,6 @@ execute "copy-to-lib" do
 end
   
 directory "#{node[:lib][:lib_dir]}/temp" do
+    recursive true
     action :delete
 end
