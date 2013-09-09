@@ -15,6 +15,7 @@ directory "#{node[:lib][:lib_dir]}/Predis" do
 end
 
 execute "copy-to-lib" do
+  not_if {!File.exists?("#{node[:lib][:lib_dir]}/temp")}
   command "cp -r #{node[:lib][:lib_dir]}/temp/lib/Predis #{node[:lib][:lib_dir]}"
 end
   
