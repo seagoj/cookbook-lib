@@ -1,6 +1,6 @@
 include_recipe 'lib'
 
-git "#{ndoe[:lib][:lib_dir]}/temp" do
+git "#{node[:lib][:lib_dir]}/temp" do
   not_if {File.exists?("#{node[:lib][:lib_dir]}/Predis")}
   repository "git://github.com/nrk/predis.git"
   reference "master"
