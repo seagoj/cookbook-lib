@@ -8,7 +8,7 @@ git "#{ndoe[:lib][:lib_dir]}/temp" do
 end
   
 directory "#{node[:lib][:lib_dir]}/Predis" do
-    not_if {File.exists?({node[:lib][:lib_dir]})}
+    not_if {File.exists?(node[:lib][:lib_dir])}
     owner node[:lib][:user]
     group node[:lib][:group]
     action :create
